@@ -95,6 +95,20 @@ The solver searches for high-quality feasible solutions within a predefined time
 
 The default scenario contains 10 transport orders across 10 simulated locations (L0–L9).
 
+# pip install streamlit ortools pandas matplotlib networkx
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 5. Example Optimization Results
 
 After running the optimization, the application displays the following information for each truck:
