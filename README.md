@@ -33,3 +33,16 @@ The primary optimization objective is to **minimize the total distance traveled 
 - **Handling Time:** 20 minutes per pickup or delivery
 
 The solver searches for high-quality feasible solutions within a configured time limit. Global optimality is not guaranteed.
+
+### Configurable Inputs
+
+The application allows users to dynamically modify the following inputs:
+
+- **Vehicles:** Number of available trucks, vehicle names, maximum weight capacity (kg), and maximum number of machines carried simultaneously.
+- **Machines:** Machine identifiers and individual weights (kg).
+- **Locations:** Location identifiers and X/Y coordinates (km).
+- **Transport Orders:** Number of orders, machine assignments, pickup locations, and delivery locations.
+
+Users can add, edit, or remove entries directly through the Streamlit interface without modifying the source code.
+
+The optimization model automatically adapts to the updated inputs and recalculates the routes.
