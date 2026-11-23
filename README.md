@@ -59,41 +59,7 @@ The solver can distribute orders across vehicles and change their visiting seque
 
 The solver searches for high-quality feasible solutions within a predefined time limit. It does not guarantee a globally optimal solution.
 
-## 4. Example Input
 
-### Vehicle Fleet
-
-| Vehicle | Weight Capacity | Max. Machines |
-|---|---:|---:|
-| Truck A | 3,500 kg | 2 |
-| Truck B | 10,000 kg | 3 |
-
-### Machines
-
-| Machine | Weight |
-|---|---:|
-| M01 | 800 kg |
-| M02 | 1,300 kg |
-| M03 | 1,800 kg |
-| M04 | 2,400 kg |
-| M05 | 3,100 kg |
-| M06 | 3,900 kg |
-| M07 | 4,800 kg |
-| M08 | 6,100 kg |
-| M09 | 7,500 kg |
-| M10 | 9,400 kg |
-
-### Example Transport Orders
-
-| Order | Machine | Pickup | Delivery |
-|---|---|---|---|
-| N01 | M01 | L1 | L3 |
-| N02 | M02 | L2 | L5 |
-| N03 | M03 | L9 | L4 |
-| N04 | M04 | L3 | L0 |
-| N05 | M05 | L0 | L8 |
-
-The default scenario contains 10 transport orders across 10 simulated locations (L0–L9).
 
 # pip install streamlit ortools pandas matplotlib networkx
 
@@ -107,35 +73,6 @@ The default scenario contains 10 transport orders across 10 simulated locations 
 
 
 
-
-
-## 5. Example Optimization Results
-
-After running the optimization, the application displays the following information for each truck:
-
-- Ordered route from departure to return
-- Pickup and delivery actions at each stop
-- Current load in kilograms and number of machines
-- Total distance traveled
-- Number of completed transport orders
-- Driving time and total working time
-
-### Example Route Format
-
-`L0 → L1 → L3 → L0`
-
-| Stop | Action | Machine | Load After Action |
-|---|---|---|---:|
-| L1 | Pickup | M01 | 800 kg |
-| L3 | Delivery | M01 | 0 kg |
-
-*Illustrative route only. Actual routes and distances depend on the input data and optimization results.*
-
-### Route Visualization
-
-The application visualizes truck routes using Matplotlib, with different colors representing different vehicles.
-
-**Suggested screenshot:** Add a screenshot of the actual optimized routes here.
 
 ## 6. Running the Application
 
@@ -158,6 +95,7 @@ pip install streamlit ortools pandas matplotlib
 ```bash
 streamlit run app.py
 ```
+# pip install streamlit ortools pandas matplotlib networkx
 
 Then open the URL displayed by Streamlit.
 
@@ -169,22 +107,6 @@ Then open the URL displayed by Streamlit.
 4. Inspect the optimized truck assignments, distances, and working times.
 5. Review the route visualization and pickup/delivery actions.
 
-## 7. Testing
-
-The application is tested against key business constraints:
-
-| Test | Scenario | Expected Behavior |
-|---|---|---|
-| Vehicle Capacity | Reduce truck capacity below a machine's weight | Display an infeasibility warning |
-| Pickup & Delivery | Optimize transport orders | Pickup occurs before delivery using the same truck |
-| Working Time | Optimize the default dataset | Each truck stays within 540 minutes |
-| Depot Return | Inspect generated routes | Every truck starts and ends at L0 |
-
-## 8. AI-Assisted Development
-
-AI tools were used to support implementation, debugging, and documentation.
-
-Generated suggestions were reviewed and checked against the original task requirements. Application behavior was verified through manual testing and inspection of optimization results.
 
 ## 9. Limitations and Future Improvements
 
@@ -192,9 +114,3 @@ Generated suggestions were reviewed and checked against the original task requir
 - Travel speed and handling times are assumed constant.
 - The optimization algorithm does not guarantee a global optimum.
 - Future improvements could include real-world routing APIs, traffic conditions, and additional scheduling constraints.
-
-## 10. Development Time
-
-**Estimated development time:** [Insert actual time spent]
-
-This project was developed as a functional prototype for the UP RENT software development assignment.
