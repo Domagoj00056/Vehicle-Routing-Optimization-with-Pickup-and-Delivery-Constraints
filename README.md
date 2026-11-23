@@ -97,17 +97,6 @@ Once started, open the local URL displayed in your terminal, typically:
 4. **Analyze results** — Review truck assignments, total distances, completed orders, and estimated working hours.
 5. **Explore routes** — Inspect the route visualization and the sequence of pickup and delivery locations.
 
-### ✅ Expected Results
-
-After successful optimization, the application displays:
-
-- Total distance traveled by both trucks.
-- Individual truck routes and completed transport orders.
-- Estimated driving time and total working time.
-- A graphical visualization of the optimized routes.
-- Warnings when transport orders cannot be completed under the defined constraints.
-
-**No API keys, external mapping services, or database configuration are required.**
 
 
 ## 9. Limitations and Future Improvements
