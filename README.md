@@ -4,13 +4,13 @@ A Python-based logistics optimization application that automatically assigns tra
 
 Built using **Python, Google OR-Tools, Streamlit, Pandas, and Matplotlib**.
 
-## 1. Project Overview
+## Project Overview
 
 The application solves a real-world logistics optimization problem: transporting construction machinery between multiple locations using a fleet of trucks.
 
 The goal is to **minimize total distance traveled** while ensuring that every transport order is completed and all operational constraints are satisfied.
 
-## 2. Configurable Inputs
+## Configurable Inputs
 
 Users can add, modify, or remove the following data directly through the web interface:
 
@@ -77,7 +77,7 @@ Once started, open the local URL displayed in your terminal, typically:
 
 **http://localhost:8501**
 
-### 3. Using the Application
+### Using the Application
 
 1. **Load sample data** — Click `📥 Učitaj primjerne podatke` to populate the application with the provided dataset.
 2. **Review and customize inputs** — Edit trucks, machines, locations, and transport orders directly in the interface.
@@ -87,7 +87,7 @@ Once started, open the local URL displayed in your terminal, typically:
 
 
 
-## 9. Limitations and Future Improvements
+## Limitations and Future Improvements
 
 - Euclidean distances are used instead of real road networks.
 - Travel speed and handling times are assumed constant.
