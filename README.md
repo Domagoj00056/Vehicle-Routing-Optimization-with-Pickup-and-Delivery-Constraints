@@ -47,8 +47,13 @@ The optimization model automatically adapts to changes in the input data.
 
 The solver searches for high-quality feasible solutions within a predefined time limit. It does not guarantee a globally optimal solution.
 
+### Live Demo
 
-## 🚀 Installation & Getting Started
+The UP RENT – Smart Logistics Planner application is publicly available online:
+
+https://uprent-smart-logistics.streamlit.app/
+
+## 🚀(Host Locally) Installation & Getting Started
 
 ### Prerequisites
 
