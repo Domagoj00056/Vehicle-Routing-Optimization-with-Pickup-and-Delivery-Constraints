@@ -60,52 +60,54 @@ The solver can distribute orders across vehicles and change their visiting seque
 The solver searches for high-quality feasible solutions within a predefined time limit. It does not guarantee a globally optimal solution.
 
 
+## 🚀 Installation & Getting Started
 
-# pip install streamlit ortools pandas matplotlib networkx
+### Prerequisites
 
+- **Python 3.11** (recommended)
+- **pip** (Python package manager)
 
+### 1. Install Dependencies
 
-
-
-
-
-
-
-
-
-
-## 6. Running the Application
-
-### Requirements
-
-- Python 3.11 or compatible version
-- Streamlit
-- Google OR-Tools
-- Pandas
-- Matplotlib
-
-### Installation
+Open a terminal in the project directory and run:
 
 ```bash
-pip install streamlit ortools pandas matplotlib
+python -m pip install -r requirements.txt
 ```
 
-### Start the Application
+This installs all required libraries, including Streamlit, Google OR-Tools, Pandas, Matplotlib, and NetworkX.
+
+### 2. Launch the Application
+
+Start the Streamlit web application:
 
 ```bash
-streamlit run app.py
+python -m streamlit run app.py
 ```
-# pip install streamlit ortools pandas matplotlib networkx
 
-Then open the URL displayed by Streamlit.
+Once started, open the local URL displayed in your terminal, typically:
 
-### Usage
+**http://localhost:8501**
 
-1. Load the example dataset.
-2. Review or modify the input tables.
-3. Click **Optimize Routes**.
-4. Inspect the optimized truck assignments, distances, and working times.
-5. Review the route visualization and pickup/delivery actions.
+### 3. Using the Application
+
+1. **Load sample data** — Click `📥 Učitaj primjerne podatke` to populate the application with the provided dataset.
+2. **Review and customize inputs** — Edit trucks, machines, locations, and transport orders directly in the interface.
+3. **Run optimization** — Click `Optimiziraj rute` to calculate efficient transport routes.
+4. **Analyze results** — Review truck assignments, total distances, completed orders, and estimated working hours.
+5. **Explore routes** — Inspect the route visualization and the sequence of pickup and delivery locations.
+
+### ✅ Expected Results
+
+After successful optimization, the application displays:
+
+- Total distance traveled by both trucks.
+- Individual truck routes and completed transport orders.
+- Estimated driving time and total working time.
+- A graphical visualization of the optimized routes.
+- Warnings when transport orders cannot be completed under the defined constraints.
+
+**No API keys, external mapping services, or database configuration are required.**
 
 
 ## 9. Limitations and Future Improvements
