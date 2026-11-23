@@ -73,7 +73,46 @@ if st.button("📥 Učitaj primjerne podatke"):
     st.session_state.nalozi = primjer_nalozi.copy()
     st.rerun()
 
+if st.button("🧪 Test 1 – Nedovoljna nosivost"):
+    st.session_state.kamioni = primjer_kamioni.copy()
+    st.session_state.kamioni.loc[
+        st.session_state.kamioni["Kamion"] == "Kamion B",
+        "Nosivost (kg)"
+    ] = 1000
 
+    st.session_state.strojevi = primjer_strojevi.copy()
+    st.session_state.lokacije = primjer_lokacije.copy()
+    st.session_state.nalozi = primjer_nalozi.copy()
+
+    st.rerun()
+
+if st.button("🧪 Test 2 – Prekoračenje radnog vremena"):
+    st.session_state.kamioni = primjer_kamioni.copy()
+    st.session_state.strojevi = primjer_strojevi.copy()
+    st.session_state.lokacije = primjer_lokacije.copy()
+    st.session_state.nalozi = primjer_nalozi.copy()
+
+    # L7 pomičemo na 600 km od baze
+    st.session_state.lokacije.loc[
+        st.session_state.lokacije["Lokacija"] == "L7",
+        ["X", "Y"]
+    ] = [600, 0]
+
+    st.rerun()
+
+if st.button("🧪 Test 3 – Nepostojeća lokacija"):
+    st.session_state.kamioni = primjer_kamioni.copy()
+    st.session_state.strojevi = primjer_strojevi.copy()
+    st.session_state.lokacije = primjer_lokacije.copy()
+    st.session_state.nalozi = primjer_nalozi.copy()
+
+    # N01 pokušava preuzeti stroj na nepostojećoj lokaciji
+    st.session_state.nalozi.loc[
+        st.session_state.nalozi["Nalog"] == "N01",
+        "Preuzimanje"
+    ] = "L99"
+
+    st.rerun()
 
 # Prikaz i uređivanje tablica
 
@@ -301,4 +340,3 @@ if "data" in locals() and data.get("success"):
 
     st.pyplot(fig)
     plt.close(fig)
-
