@@ -1,6 +1,4 @@
-# UP RENT – Smart Logistics Planner
-
-**Capacitated Pickup and Delivery Vehicle Routing Problem (PDVRP)**
+# **Capacitated Pickup and Delivery Vehicle Routing Problem (PDVRP)**
 
 A Python-based logistics optimization application that automatically assigns transport orders to available trucks and determines efficient pickup and delivery routes while respecting vehicle capacity, pickup-delivery precedence, and working-time constraints.
 
@@ -23,13 +21,8 @@ Users can add, modify, or remove the following data directly through the web int
 
 The optimization model automatically adapts to changes in the input data.
 
-## 3. Optimization Model
 
-The problem is modeled as a **Capacitated Pickup and Delivery Vehicle Routing Problem (PDVRP)** using Google OR-Tools.
-
-### Hard Constraints
-
-Every feasible solution must satisfy:
+### Hard Constraints(solution must satisfy):
 
 - **Weight Capacity:** A truck cannot exceed its maximum carrying capacity at any point along its route.
 - **Machine Count:** A truck cannot carry more than its permitted number of machines simultaneously.
@@ -39,13 +32,9 @@ Every feasible solution must satisfy:
 - **Working Time:** Driving, loading, and unloading must fit within 9 hours per truck.
 - **Order Completion:** All transport orders must be fulfilled.
 
-If the constraints cannot be satisfied, the application reports that no feasible solution was found.
-
 ### Optimization Objective
 
 **Minimize the combined distance traveled by all trucks.**
-
-The solver can distribute orders across vehicles and change their visiting sequence to reduce unnecessary travel.
 
 ### Optimization Algorithm
 
@@ -55,7 +44,6 @@ The solver can distribute orders across vehicles and change their visiting seque
 - **Distance:** Euclidean distance, rounded to 0.1 km per segment
 - **Average Speed:** 60 km/h
 - **Loading / Unloading:** 20 minutes per operation
-- **Working Time Limit:** 540 minutes per truck
 
 The solver searches for high-quality feasible solutions within a predefined time limit. It does not guarantee a globally optimal solution.
 
